@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--Solo CSS Boostrap-->
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <title>notes Ajax</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a href="" class="navbar-brand">Notes min</a>
+
+        <ul class="navbar-nav ml-auto">
+                <!--no tiene action xq no queremos retomar un html, ya que lo procesamos con js-->
+                <form class="form-inline my-2 my-lg-0">
+                    <input type="search" id="search" class="form-control mr-sm-2" placeholder="search your note">
+                    <button class="btn btn-danger my-2 my-sm-8" type="submit">Search</button>
+                </form>
+            </ul>
+    </nav>
+    <!--Llamamos todo por js, por eso es importante los id-->
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-5">
+                <div class="card">
+                    <div class="card-body">
+                        <form id="notes-form">
+                            <div class="form-group">
+                                <input type="text" id="name" class="form-control" placeholder="name">
+                            </div>
+                            <div class="form-group">
+                                <textarea id="description" cols="30" rows="10" class="form-control" placeholder="description"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block text-center">Save note</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <table class="table table-bordered table-sm">
+                    <thead>
+                        <tr>
+                            <td>Id</td>
+                            <td>Name</td>
+                            <td>Note</td>
+                        </tr>
+                    </thead>
+                    <tbody id="notes">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!--llamamos a la logica del js-->
+    <script
+  src="https://code.jquery.com/jquery-3.4.1.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+  crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
